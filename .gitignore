@@ -1,0 +1,86 @@
+# ==============================================================================
+# Android & Gradle Build Files
+# ==============================================================================
+*.iml
+.gradle/
+build/
+app/build/
+/build
+/app/build
+captures/
+.externalNativeBuild/
+.cxx/
+local.properties
+/local.properties
+
+# ==============================================================================
+# IDE & System Files
+# ==============================================================================
+.idea/
+/.idea/
+*.ipr
+*.iws
+.kotlin/
+.DS_Store
+Thumbs.db
+
+# ==============================================================================
+# Security & Credentials (NEVER COMMIT)
+# ==============================================================================
+# Firebase Service Account & Android Configuration
+google-services.json
+*/google-services.json
+app/google-services.json
+firebase-key.json
+*/firebase-key.json
+database/firebase-key.json
+
+# Environment variables & secrets
+*.env
+*.env.local
+*.env.*.local
+
+# Keystores & Signing
+*.keystore
+*.jks
+signing.properties
+
+# Cookies & Authentication tokens
+*cookie*.txt
+*.cookie
+yt_cookies.txt
+www.youtube.com_cookies.txt
+
+# Local Tunnel & Hostname Configurations
+ngrok_domain.txt
+*.exe
+
+# Keep Template Examples Tracked in Git
+!google-services.json.example
+!*/google-services.json.example
+!firebase-key.json.example
+!*/firebase-key.json.example
+!*.env.example
+!*cookie*.txt.example
+!ngrok_domain.txt.example
+
+# ==============================================================================
+# Python Backend & Virtual Environments
+# ==============================================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# ==============================================================================
+# Logs & Diagnostic Outputs
+# ==============================================================================
+*.log
+backend.log
