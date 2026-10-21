@@ -252,5 +252,5 @@ Contributions, feedback, and pull requests are welcome!
 This project is licensed under the Apache License 2.0. See the [LICENSE](LICENSE) file for details.
 
 <div align="center">
-  <sub>Crafted with ❤️ for pure musical performance & native fluidity.</sub>
+  <sub>Crafted for pure musical performance & native fluidity.</sub>
 </div>
