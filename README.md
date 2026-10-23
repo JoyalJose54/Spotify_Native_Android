@@ -6,6 +6,19 @@
   
   **A flagship native Android music streaming client engineered with Kotlin, Jetpack Compose, AndroidX Media3, and Real-Time STFT Audio DSP.**
 
+  <br />
+
+  <!-- ── HERO PRODUCT LAUNCH VIDEO ── -->
+  <a href="assets/demo/launch_video.mp4">
+    <img src="assets/demo/launch_demo.gif" alt="Spotify Native Android Launch Video" width="94%" style="border-radius: 18px; border: 2px solid rgba(29, 185, 84, 0.4); box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8), 0 0 30px rgba(29, 185, 84, 0.25);" />
+  </a>
+
+  <br />
+  <p>
+    <b>🎬 Product Launch Showcase (1080p HD)</b> • <a href="assets/demo/launch_video.mp4">▶ Play Video with Audio (MP4)</a> • <a href="assets/demo/launch_poster.jpg">🖼️ Poster Frame</a>
+  </p>
+  <br />
+
   [![Kotlin](https://img.shields.io/badge/Kotlin-2.0.20-7F52FF?style=for-the-badge&logo=kotlin&logoColor=white)](https://kotlinlang.org/)
   [![Android](https://img.shields.io/badge/Android-API%2026%2B%20(Target%2035)-3DDC84?style=for-the-badge&logo=android&logoColor=white)](https://developer.android.com)
   [![Jetpack Compose](https://img.shields.io/badge/Jetpack%20Compose-BOM%202024.10-4285F4?style=for-the-badge&logo=jetpackcompose&logoColor=white)](https://developer.android.com/jetpack/compose)

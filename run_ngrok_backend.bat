@@ -26,5 +26,5 @@ echo   Leave this window open while using the app!
 echo   (For silent background auto-start on boot, run: run_backend_silent.vbs)
 echo ========================================================
 echo.
-ngrok http --domain=%NGROK_DOMAIN% 8080
+ngrok http --url=%NGROK_DOMAIN% 8080
 pause

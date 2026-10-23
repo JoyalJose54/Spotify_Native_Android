@@ -769,11 +769,11 @@ fun IngestionScreen(
                     )
                     Spacer(modifier = Modifier.height(12.dp))
 
-                    // Preset 1: Cloudflare / Ngrok
+                    // Preset 1: Permanent Ngrok Tunnel
                     Button(
                         onClick = {
-                            ingestionService.backendUrl = IngestionService.CLOUDFLARE_URL
-                            customUrlInput = IngestionService.CLOUDFLARE_URL
+                            ingestionService.backendUrl = IngestionService.DEFAULT_TUNNEL_URL
+                            customUrlInput = IngestionService.DEFAULT_TUNNEL_URL
                             showSettingsDialog = false
                             coroutineScope.launch {
                                 isCheckingStatus = true
@@ -782,14 +782,14 @@ fun IngestionScreen(
                             }
                         },
                         colors = ButtonDefaults.buttonColors(
-                            containerColor = if (ingestionService.backendUrl == IngestionService.CLOUDFLARE_URL) SpotifyColors.green.copy(alpha = 0.2f) else Color(0xFF282828)
+                            containerColor = if (ingestionService.backendUrl == IngestionService.DEFAULT_TUNNEL_URL) SpotifyColors.green.copy(alpha = 0.2f) else Color(0xFF282828)
                         ),
                         modifier = Modifier.fillMaxWidth(),
                         shape = RoundedCornerShape(8.dp)
                     ) {
                         Column(horizontalAlignment = Alignment.CenterHorizontally, modifier = Modifier.padding(vertical = 2.dp)) {
-                            Text("Cloudflare Tunnel (Default)", color = Color.White, fontSize = 13.sp, fontWeight = FontWeight.Bold)
-                            Text(IngestionService.CLOUDFLARE_URL.removePrefix("https://"), color = SpotifyColors.lightGrey, fontSize = 11.sp, maxLines = 1)
+                            Text("Ngrok Tunnel (Permanent Default)", color = Color.White, fontSize = 13.sp, fontWeight = FontWeight.Bold)
+                            Text(IngestionService.DEFAULT_TUNNEL_URL.removePrefix("https://"), color = SpotifyColors.lightGrey, fontSize = 11.sp, maxLines = 1)
                         }
                     }
 
@@ -814,8 +814,8 @@ fun IngestionScreen(
                         shape = RoundedCornerShape(8.dp)
                     ) {
                         Column(horizontalAlignment = Alignment.CenterHorizontally, modifier = Modifier.padding(vertical = 2.dp)) {
-                            Text("Local Wi-Fi (${IngestionService.LOCAL_WIFI_URL.removePrefix("http://")})", color = Color.White, fontSize = 13.sp, fontWeight = FontWeight.Bold)
-                            Text("Direct LAN Connection", color = SpotifyColors.lightGrey, fontSize = 11.sp)
+                            Text("Local Home Wi-Fi (${IngestionService.LOCAL_WIFI_URL.removePrefix("http://")})", color = Color.White, fontSize = 13.sp, fontWeight = FontWeight.Bold)
+                            Text("Fast Direct LAN Connection", color = SpotifyColors.lightGrey, fontSize = 11.sp)
                         }
                     }
 

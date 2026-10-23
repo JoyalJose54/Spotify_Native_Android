@@ -36,8 +36,9 @@ data class CsvEntry(
 
 class IngestionService(private val context: Context) {
     companion object {
-        const val CLOUDFLARE_URL = "https://your-tunnel.trycloudflare.com"
-        const val LOCAL_WIFI_URL = "http://10.0.2.2:8080"
+        const val DEFAULT_TUNNEL_URL = "https://diary-lugged-petticoat.ngrok-free.dev"
+        const val LOCAL_WIFI_URL = "http://10.0.7.69:8080"
+        const val EMULATOR_URL = "http://10.0.2.2:8080"
     }
 
     private val client = OkHttpClient.Builder()
@@ -51,8 +52,8 @@ class IngestionService(private val context: Context) {
     var backendUrl: String
         get() {
             val saved = prefs.getString("backend_url", null)
-            if (saved.isNullOrBlank()) {
-                return CLOUDFLARE_URL
+            if (saved.isNullOrBlank() || saved.contains("trycloudflare.com") || saved.contains("removal-magnolia-overhand")) {
+                return DEFAULT_TUNNEL_URL
             }
             return saved
         }

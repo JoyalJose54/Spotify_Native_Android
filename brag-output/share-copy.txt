@@ -1,0 +1,3 @@
+Built Spotify Native Android: a flagship mobile streaming client engineered from scratch with Kotlin, Jetpack Compose, and ExoPlayer.
+
+Featuring real-time on-device 4096-pt STFT vocal suppression (Karaoke mode), GPU fluid orbital mesh gradients, and instant 0ms Room caching.

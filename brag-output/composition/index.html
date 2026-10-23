@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Spotify Native Android — Launch Video</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+</head>
+<body>
+  <!-- Root Composition Container (First Child of Body) -->
+  <div id="root" data-composition-id="root" data-width="1920" data-height="1080">
+    <!-- Background Music & SFX inside root -->
+    <audio id="bg-music" src="assets/music/happy-beats-business-moves-vol-1-by-ende-dot-app.mp3" data-start="0" data-duration="18.0" data-volume="0.8" data-fade-out="1.5"></audio>
+    <audio id="sfx-switch" src="assets/sfx/switch1.ogg" data-start="8.8" data-duration="0.32" data-volume="0.6"></audio>
+    <audio id="sfx-click" src="assets/sfx/click1.ogg" data-start="13.2" data-duration="0.10" data-volume="0.5"></audio>
+
+    <div class="ambient-glow glow-1" data-layout-allow-overflow></div>
+    <div class="ambient-glow glow-2" data-layout-allow-overflow></div>
+
+    <!-- ── SCENE 1: The Engineering Hook (0.0s - 3.5s) ── -->
+    <div id="scene1" class="scene clip" data-start="0" data-duration="3.5">
+      <div class="scene-inner" id="s1-inner">
+        <div class="hook-eyebrow" id="s1-eyebrow">Flagship Mobile Architecture</div>
+        <img id="s1-logo-img" src="assets/images/spotify_logo.png" alt="Spotify Logo" class="hook-logo">
+        <div class="hook-title" id="s1-sub">Streaming music is standard.</div>
+        <div class="hook-headline" id="s1-headline">What if your native client was an audio powerhouse?</div>
+      </div>
+    </div>
+
+    <!-- ── SCENE 2: 120Hz Now Playing Experience (3.5s - 8.0s) ── -->
+    <div id="scene2" class="scene clip" data-start="3.5" data-duration="4.5">
+      <div class="scene2-content" id="s2-inner">
+        <!-- Phone Mockup -->
+        <div class="phone-mockup" id="s2-phone">
+          <div class="phone-fluid-mesh" data-layout-allow-overflow></div>
+          
+          <div class="phone-header" data-layout-ignore>
+            <span>PLAYING FROM PLAYLIST</span>
+            <span style="font-weight: 700; color: #32C064;">HI-RES 256K</span>
+          </div>
+
+          <div class="album-cover" id="s2-album">
+            <div class="album-art-inner">
+              <div class="album-art-icon">🎵</div>
+              <div class="album-art-tag">AndroidX Media3 ExoPlayer</div>
+            </div>
+          </div>
+
+          <div class="track-meta">
+            <div class="track-title">Starboy</div>
+            <div class="track-artist">The Weeknd, Daft Punk</div>
+          </div>
+
+          <div class="progress-container">
+            <div class="progress-bar-bg">
+              <div class="progress-fill" id="s2-progress"></div>
+            </div>
+            <div class="timer-row">
+              <span id="s2-timer">02:14</span>
+              <span data-layout-ignore>03:50</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Callouts Info -->
+        <div class="scene2-info" id="s2-info">
+          <div class="section-tag">Fluid Motion UI</div>
+          <div class="section-heading">Buttery-Smooth 120Hz Jetpack Compose</div>
+          <div class="section-desc">
+            Zero-latency transitions with GPU fluid mesh shaders.
+          </div>
+          <div class="feature-pill-grid">
+            <div class="feature-pill" id="s2-pill1">
+              <span class="pill-icon">✨</span>
+              <span class="pill-text">Dynamic Palette Mesh Backdrop</span>
+            </div>
+            <div class="feature-pill" id="s2-pill2">
+              <span class="pill-icon">⚡</span>
+              <span class="pill-text">Rolling Micro-Animated Tabular Timers</span>
+            </div>
+            <div class="feature-pill" id="s2-pill3">
+              <span class="pill-icon">🎛️</span>
+              <span class="pill-text">Gesture-Driven Spring Physics Sheet</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── SCENE 3: 4096-Point STFT Vocal Suppression (8.0s - 13.0s) ── -->
+    <div id="scene3" class="scene clip" data-start="8.0" data-duration="5.0">
+      <div class="stft-container" id="s3-inner">
+        <div class="stft-badge" id="s3-badge">🎙️ Apple Sing / Karaoke Mode</div>
+        <div class="stft-title" id="s3-title">Real-Time On-Device Vocal Suppression</div>
+        <div class="stft-subtitle" id="s3-desc">
+          4096-point STFT processor inside ExoPlayer. Isolates vocals in real time with 0ms latency.
+        </div>
+
+        <!-- Spectrum Visualizer -->
+        <div class="spectrum-card" id="s3-spec-card">
+          <div class="spectrum-bars" id="s3-bars">
+            <div class="spec-bar" style="height: 45%;"></div>
+            <div class="spec-bar" style="height: 70%;"></div>
+            <div class="spec-bar" style="height: 95%;"></div>
+            <div class="spec-bar" style="height: 60%;"></div>
+            <div class="spec-bar" style="height: 85%;"></div>
+            <div class="spec-bar" style="height: 100%;"></div>
+            <div class="spec-bar" style="height: 75%;"></div>
+            <div class="spec-bar" style="height: 90%;"></div>
+            <div class="spec-bar" style="height: 55%;"></div>
+            <div class="spec-bar" style="height: 80%;"></div>
+            <div class="spec-bar" style="height: 65%;"></div>
+            <div class="spec-bar" style="height: 95%;"></div>
+            <div class="spec-bar" style="height: 85%;"></div>
+            <div class="spec-bar" style="height: 50%;"></div>
+            <div class="spec-bar" style="height: 75%;"></div>
+            <div class="spec-bar" style="height: 40%;"></div>
+          </div>
+          <div class="spectrum-status-bar" data-layout-ignore>
+            <span>DSP ENGINE: STFT_4096</span>
+            <div class="status-indicator">
+              <span style="font-size: 18px;">●</span>
+              <span>VOCAL SUPPRESSION ACTIVE [0ms LAG]</span>
+            </div>
+            <span>STEREO 48kHz</span>
+          </div>
+        </div>
+
+        <div class="stft-pills-row" id="s3-pills">
+          <div class="stft-pill">⚡ 4096-Pt STFT Engine</div>
+          <div class="stft-pill">🎯 Center-Pan Vocal Extraction</div>
+          <div class="stft-pill">📱 100% On-Device Processing</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── SCENE 4: 0ms SQLite Cache & Cloud Pipeline (13.0s - 15.5s) ── -->
+    <div id="scene4" class="scene clip" data-start="13.0" data-duration="2.5">
+      <div class="scene-inner" id="s4-inner" style="width: 100%;">
+        <div class="scene4-header">
+          <div class="section-tag" style="color: #32C064;">Architecture & Infrastructure</div>
+          <div class="section-heading" style="font-size: 52px; margin-bottom: 0;">Offline-First Zero-Reload Engine</div>
+        </div>
+
+        <div class="cards-container">
+          <div class="metric-card highlight" id="s4-card1">
+            <div class="card-num">0ms</div>
+            <div class="card-title">Instant SQLite Cache</div>
+            <div class="card-desc">Zero delay from Room persistence with silent background sync.</div>
+          </div>
+
+          <div class="metric-card" id="s4-card2">
+            <div class="card-num">256k</div>
+            <div class="card-title">Studio AAC Streams</div>
+            <div class="card-desc">High-speed transcode pipeline into Cloudinary CDN.</div>
+          </div>
+
+          <div class="metric-card" id="s4-card3">
+            <div class="card-num">24/7</div>
+            <div class="card-title">On-Demand Control</div>
+            <div class="card-desc">Desktop control app for instant 1-click cloud ingestion.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── SCENE 5: Outro & Punchline (15.5s - 18.0s) ── -->
+    <div id="scene5" class="scene clip" data-start="15.5" data-duration="2.5">
+      <div class="outro-container" id="s5-inner">
+        <img id="s5-logo-img" src="assets/images/spotify_logo.png" alt="Spotify Logo Outro" class="outro-logo">
+        <div class="outro-brand" id="s5-brand">Spotify Native Android</div>
+        <div class="outro-punchline" id="s5-punchline">BUILT FROM SCRATCH. ZERO COMPROMISES.</div>
+        
+        <div class="tech-badges-row" id="s5-badges">
+          <div class="tech-badge">Kotlin 2.0</div>
+          <div class="tech-badge">Jetpack Compose</div>
+          <div class="tech-badge">AndroidX Media3</div>
+          <div class="tech-badge">Room SQLite</div>
+          <div class="tech-badge">Open Source</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Master GSAP Timeline registered on window.__timelines["root"]
+    const tl = gsap.timeline({ paused: true });
+
+    // ── SCENE 1 ANIMATIONS (0.00s - 3.50s) ──────────────────────
+    // Frame 0 has logo and eyebrow already settled for clean idle thumbnail!
+    tl.set("#s1-eyebrow", { opacity: 1, y: 0 }, 0);
+    tl.set("#s1-logo-img", { opacity: 1, scale: 1 }, 0);
+    tl.set("#s1-sub", { opacity: 1, y: 0 }, 0);
+    tl.fromTo("#s1-headline", { scale: 0.95, opacity: 0.2 }, { scale: 1, opacity: 1, duration: 0.5, ease: "power2.out" }, 0.1);
+    tl.to("#s1-inner", { opacity: 0, duration: 0.25, ease: "power2.in" }, 3.25);
+
+    // ── SCENE 2 ANIMATIONS (3.50s - 8.00s) ──────────────────────
+    tl.fromTo("#s2-phone", { x: -40, opacity: 0 }, { x: 0, opacity: 1, duration: 0.5, ease: "power2.out" }, 3.5);
+    tl.fromTo("#s2-info", { x: 40, opacity: 0 }, { x: 0, opacity: 1, duration: 0.5, ease: "power2.out" }, 3.5);
+    tl.fromTo("#s2-progress", { width: "10%" }, { width: "70%", duration: 4.0, ease: "none" }, 3.6);
+    // Sequential pill reveals
+    tl.fromTo("#s2-pill1", { x: 20, opacity: 0 }, { x: 0, opacity: 1, duration: 0.35, ease: "power2.out" }, 4.2);
+    tl.fromTo("#s2-pill2", { x: 20, opacity: 0 }, { x: 0, opacity: 1, duration: 0.35, ease: "power2.out" }, 4.7);
+    tl.fromTo("#s2-pill3", { x: 20, opacity: 0 }, { x: 0, opacity: 1, duration: 0.35, ease: "power2.out" }, 5.2);
+    tl.to("#s2-inner", { opacity: 0, duration: 0.25, ease: "power2.in" }, 7.75);
+
+    // ── SCENE 3 ANIMATIONS (8.00s - 13.00s) ─────────────────────
+    tl.fromTo("#s3-badge", { scale: 0.9, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.4, ease: "power2.out" }, 8.0);
+    tl.fromTo("#s3-title", { y: -15, opacity: 0 }, { y: 0, opacity: 1, duration: 0.4, ease: "power2.out" }, 8.1);
+    tl.fromTo("#s3-desc", { y: -10, opacity: 0 }, { y: 0, opacity: 1, duration: 0.4, ease: "power2.out" }, 8.2);
+    tl.fromTo("#s3-spec-card", { scale: 0.95, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.5, ease: "power2.out" }, 8.4);
+    
+    // Waveform bars dynamic flutter
+    document.querySelectorAll("#s3-bars .spec-bar").forEach((bar, idx) => {
+      const baseTime = 8.6 + (idx * 0.04);
+      tl.to(bar, { scaleY: 1.25, duration: 0.25, yoyo: true, repeat: 7, ease: "sine.inOut" }, baseTime);
+    });
+
+    tl.fromTo("#s3-pills", { y: 15, opacity: 0 }, { y: 0, opacity: 1, duration: 0.4, ease: "power2.out" }, 9.8);
+    tl.to("#s3-inner", { opacity: 0, duration: 0.25, ease: "power2.in" }, 12.75);
+
+    // ── SCENE 4 ANIMATIONS (13.00s - 15.50s) ────────────────────
+    tl.fromTo("#s4-card1", { y: 25, opacity: 0 }, { y: 0, opacity: 1, duration: 0.35, ease: "power2.out" }, 13.0);
+    tl.fromTo("#s4-card2", { y: 25, opacity: 0 }, { y: 0, opacity: 1, duration: 0.35, ease: "power2.out" }, 13.3);
+    tl.fromTo("#s4-card3", { y: 25, opacity: 0 }, { y: 0, opacity: 1, duration: 0.35, ease: "power2.out" }, 13.6);
+    tl.to("#s4-inner", { opacity: 0, duration: 0.2, ease: "power2.in" }, 15.3);
+
+    // ── SCENE 5 ANIMATIONS (15.50s - 18.00s) ────────────────────
+    // Final scene elements start immediately at 15.5s and hold firmly for >2.0s!
+    tl.fromTo("#s5-logo-img", { scale: 0.85, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.4, ease: "power2.out" }, 15.5);
+    tl.fromTo("#s5-brand", { y: 10, opacity: 0 }, { y: 0, opacity: 1, duration: 0.35, ease: "power2.out" }, 15.5);
+    tl.fromTo("#s5-punchline", { y: 10, opacity: 0 }, { y: 0, opacity: 1, duration: 0.35, ease: "power2.out" }, 15.5);
+    tl.fromTo("#s5-badges", { y: 10, opacity: 0 }, { y: 0, opacity: 1, duration: 0.35, ease: "power2.out" }, 15.7);
+
+    // Register on window
+    window.__timelines = window.__timelines || {};
+    window.__timelines["root"] = tl;
+  </script>
+</body>
+</html>
